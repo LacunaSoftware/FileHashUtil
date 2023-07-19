@@ -14,7 +14,7 @@ internal class Program {
 	static async Task<int> Main(string[] args) {
 		var fileOption = new Option<string>(aliases: new string[] { "--file", "-f" }, description: "Input file") { IsRequired = true };
 		var sha256Option = new Option<bool?>("--sha256",description: "Compute SHA256 hash") { IsRequired = false };
-		var sha1Option = new Option<bool?>(name: "--sha1", description: "Compute SHA256 hash") { IsRequired = false };
+		var sha1Option = new Option<bool?>(name: "--sha1", description: "Compute SHA1 hash") { IsRequired = false };
 		var fileInfoOption = new Option<bool?>(aliases: new string[] { "--fileInfo", "-i" }, description: "Add file info to output") { IsRequired = false };
 
 		var rootCommand = new RootCommand("Lacuna Software File Hash");
@@ -24,7 +24,7 @@ internal class Program {
 		rootCommand.AddOption(fileInfoOption);
 
 		rootCommand.SetHandler((file, sha256opt, sha1opt, fileInfo) => {
-			Console.WriteLine("File Hash v1.1");
+			Console.WriteLine("File Hash v1.2");
 			Console.WriteLine("");
 			if (!File.Exists(file)) {
 				Console.WriteLine($"{file} not found");
