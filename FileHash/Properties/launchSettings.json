@@ -2,7 +2,7 @@
   "profiles": {
     "FileHash": {
       "commandName": "Project",
-      "commandLineArgs": "-f d:\\Temp\\tst_log.zip"
+      "commandLineArgs": "-f c:\\Temp\\Gato.20230522_162805_6.mp4"
     }
   }
 }
