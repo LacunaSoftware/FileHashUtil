@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FileHash": {
+      "commandName": "Project",
+      "commandLineArgs": "-f d:\\Temp\\tst_log.zip"
+    }
+  }
+}
