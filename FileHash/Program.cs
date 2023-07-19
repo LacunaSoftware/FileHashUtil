@@ -7,6 +7,7 @@ using System.Net.Mail;
 using System.Net;
 using DataSizeUnits;
 using System.Runtime.Intrinsics.Arm;
+using Pastel;
 
 namespace FileHash;
 internal class Program {
@@ -90,7 +91,7 @@ internal class Program {
 					}
 				}
 			} catch (Exception e) {
-				Console.WriteLine($"Error: {e.Message}");
+				Console.WriteLine($"Error: {e.Message}".Pastel(ConsoleColor.Red));
 			}
 
 		}, fileOption, sha256Option, sha1Option, fileInfoOption);
@@ -98,7 +99,7 @@ internal class Program {
 	}
 
 	static void PrintProgressBar(double percentage) {
-		Console.Write($"\r{percentage:N1}% Completed");
+		Console.Write($"\r{percentage:N1}% Completed".Pastel(ConsoleColor.Green));
 	}
 
 }
